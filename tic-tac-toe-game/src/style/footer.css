@@ -1,0 +1,46 @@
+.footer{
+    height: 75px;
+    position: relative;
+    bottom: auto;
+    width: 100%;
+    background-color: rgb(226, 165, 50);
+    display: flex;
+    justify-content: center;
+}
+.info-card{
+    display: flex;
+    width: 400px;
+    height: 100%;
+}
+.logo-card{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 200px;
+    height: 100%;
+}
+.social-networks{
+    width: 200px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.full_logo{
+    padding-right: 10px;
+    width: 90px;
+}
+.info-card{
+    padding-left: 10px;
+}
+.inst-card, .linkedin-card{
+    width: 40px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inst, .linkedin{
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}

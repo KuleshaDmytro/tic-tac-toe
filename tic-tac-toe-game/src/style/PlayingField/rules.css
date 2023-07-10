@@ -1,0 +1,31 @@
+h2{
+    margin-bottom: 0;
+}
+p{
+    margin-top: 0;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 17px;
+}
+ol{
+    margin-top: 0;
+    padding: 0 0 0 18px;
+}
+li{
+    padding: 10px 0;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 17px;
+}
+.rules{
+    margin: 25px 0 15px 0;
+    padding: 0 0 10px 0;
+}
+.rules_container{
+    text-align: left;
+}
+
+@media (max-width: 610px ) {
+    .rules{
+        padding: 0 10px;
+        transition: 0.3s all;
+    }   
+}

@@ -1,0 +1,12 @@
+.playingField_container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.playingField_wrapper{
+    width: 600px;
+}
+.modal-open {
+    overflow: hidden;
+}
+
