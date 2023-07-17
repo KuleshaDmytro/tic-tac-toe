@@ -23,9 +23,9 @@ li{
     text-align: left;
 }
 
-@media (max-width: 610px ) {
+@media (max-width: 630px ) {
     .rules{
         padding: 0 10px;
-        transition: 0.3s all;
+        /* transition: 0.3s all; */
     }   
 }

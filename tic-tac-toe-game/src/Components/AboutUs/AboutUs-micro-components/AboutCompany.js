@@ -20,4 +20,4 @@ export const AboutCompany = () => {
             <hr className='emphasis'/>
         </main>
     )
-}
+} 

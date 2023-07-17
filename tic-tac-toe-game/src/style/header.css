@@ -23,7 +23,7 @@ a{
 .active{
     color: aqua;
 }
-.test{
+.logo_card{
     display: flex;
     justify-content: flex-start;
     width: 33.3333%;
@@ -97,3 +97,113 @@ a{
   transition: 400ms ease all;
   animation-delay:1s;
 }
+
+/* Burger Menu */
+
+.burger-container{
+    display: flex;
+    align-items: center;
+}
+
+.burger-menu{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.burger-bar{
+    display: none;
+    width: 2.5em;
+    height: 0.3em;
+    background-color: black;
+    border-radius: 0.5em;
+}
+
+.menu{
+    width: 250px;
+    height: 100vh;
+    background-color: rgb(247, 234, 190);
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    user-select: none;
+}
+.menu_padding_top{
+    padding-top: 90px;
+}
+.burger-nav-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.burger_btn-nav{
+    margin: 10px 0;
+    height: 40px;
+    font-size: 18px;
+}
+/* .burger_underline{
+    width: 80%;
+    padding: 0;
+} */
+/* ---------------Sliding menu ---------------------- */
+
+.hidden{
+    display: none;
+}
+
+.visible{
+    display: inherit;
+}
+
+/* ------------ Menu animation -------------------- */
+
+.burger-bar.clicked:nth-child(1){
+    transform: rotate(45deg) translate(0.6em, 0.8em);
+    transition: ease-out 0.3s;
+}
+
+.burger-bar.clicked:nth-child(2){
+    transform: scale(0.0001);
+    /* transition: ease-out 0.3s; */
+}
+
+.burger-bar.clicked:nth-child(3){
+    transform: rotate(135deg) translate(-0.5em, 0.6em);
+    transition: ease-out 0.3s;
+}
+
+.burger-bar.unclicked {
+    transform: rotate(0) translate(0);
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s;
+}
+
+@media(min-width: 681px){
+    .menu{
+        display: none;
+    }
+}
+
+@media (max-width: 680px){
+    .nav, .login{
+        display: none;
+    }
+    .burger-bar{
+        display: block;
+    }
+    .burger-menu{
+        margin: 3px 0;
+        height: 33px;
+        width: 3em;
+    }
+    .header_card{
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 25px;
+    }
+}
+

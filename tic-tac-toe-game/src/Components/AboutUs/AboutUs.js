@@ -5,11 +5,16 @@ import { AboutCompany } from './AboutUs-micro-components/AboutCompany'
 import { OurMission } from './AboutUs-micro-components/OurMission'
 import { OurExpirience } from './AboutUs-micro-components/OurExpirience'
 
+
 export const AboutUs = () => {
+
+
     return(
         <>
         <div className="aboutUs_container pos">
            <div className='aboutUs_wrapper'>
+        
+
 
             <WelcomeTo/>
 

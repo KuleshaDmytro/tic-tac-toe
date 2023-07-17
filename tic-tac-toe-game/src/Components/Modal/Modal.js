@@ -2,6 +2,8 @@ import './../../style/modal.css'
 import { useRef } from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import {Howl} from 'howler';
+import victory from './../../Sounds/victory.mp3'
 
 export const Modal = ({winner, isOpen}) => {
 
@@ -9,6 +11,17 @@ export const Modal = ({winner, isOpen}) => {
     const [isModalVisible, setModalVisibility] = useState(false);
     const [hideOverflow, setHideOverflow] = useState(false);
 
+    let sound = new Howl({
+        src: [victory],
+        volume: 0.3,
+      });
+
+    useEffect(() => {
+        {isModalVisible && 
+       
+            sound.play();
+        }
+    })
 
     useEffect(() => {
         if (isOpen) {
@@ -19,6 +32,8 @@ export const Modal = ({winner, isOpen}) => {
 
 
     const handleClick = () => {
+
+        sound.fade( 0.3 , 0 , 1000);
 
         const modalElement = modalRef.current;
         modalElement.className = ['modal modalIsClose']

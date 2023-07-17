@@ -1,26 +1,26 @@
 .footer{
     height: 75px;
-    position: relative;
+    /* position: relative; */
     bottom: auto;
-    width: 100%;
+    /* width: 100%; */
     background-color: rgb(226, 165, 50);
     display: flex;
     justify-content: center;
 }
 .info-card{
     display: flex;
-    width: 400px;
+    /* width: 300px; */
     height: 100%;
 }
 .logo-card{
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    width: 200px;
+    /* width: 200px; */
     height: 100%;
 }
 .social-networks{
-    width: 200px;
+    /* width: 200px; */
     height: 100%;
     display: flex;
     flex-direction: row;
@@ -32,15 +32,23 @@
 .info-card{
     padding-left: 10px;
 }
-.inst-card, .linkedin-card{
+.inst-card, .linkedin-card, .github-card{
     width: 40px;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.inst, .linkedin{
+.inst, .linkedin, .github{
     width: 24px;
     height: 24px;
     cursor: pointer;
+}
+.col-12{
+    position: relative;
+    width: 100%;
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
 }

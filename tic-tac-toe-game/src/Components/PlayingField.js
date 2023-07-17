@@ -22,7 +22,8 @@ export const PlayingField = () => {
   
     return(
         <div className={`playingField_container pos`}>
-          <Modal winner={whoWon} isOpen={won} />
+          
+              <Modal winner={whoWon} isOpen={won} />
           <div className='playingField_wrapper'>
            
 

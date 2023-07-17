@@ -111,3 +111,23 @@
     }
 
 }
+
+@media (max-width: 440px){
+    
+    .welcomeImg, .aboutCompanyImg, .ourMissionImg, .ourExpirienceImg{
+        
+        width: 280px !important;
+        height: 200px !important;
+    }
+
+    .img_welcome, .img_aboutCompany, .img_ourMission, .img_ourExpirience{
+
+        width: 240px !important;
+        height: 250px !important;
+
+    }
+    .welcome, .aboutCompany, .ourMission, .ourExpirience{
+        width: 240px !important;
+    } 
+
+}

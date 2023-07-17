@@ -24,7 +24,7 @@
     width: 400px;
 } 
 .img_ourExpirience{
-    width: 400px;
+    width: 100%;
     height: 350px;
 
     background-image: url('./../../../img/expirience.png');

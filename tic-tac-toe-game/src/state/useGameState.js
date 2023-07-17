@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { createArray } from "../Components/utils/array";
 import { EMPTY, X, O } from '../state/cellstate';
+import {Howl} from 'howler';
+import click from './../Sounds/select-sound.mp3'
 
 const MAX_MATRIX_LENGTH = 3;
 
@@ -25,6 +27,14 @@ export const useGameState = () => {
     }
     
     const fire = (x, y) => {
+
+      let sound = new Howl({
+        src: [click]
+      });
+
+      sound.play();
+
+      
       const cell = state.matrix[y][x];
       
       if (cell === X || cell === O) {
