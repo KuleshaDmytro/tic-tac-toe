@@ -7,10 +7,10 @@ export const AboutCompany = () => {
     return(
         <main className='aboutUs_micro_container aboutCompany_container'>
             <hr className='emphasis'/>
-                <div className='aboutCompanyImg aboutUs_retreat'>
-                    <div className='img_aboutCompany'></div>
+                <div className='aboutCompanyImg aboutUsImg aboutUs_retreat'>
+                    <div className='img_aboutCompany img_size_aboutUs'></div>
                 </div>
-                <div className="aboutCompany aboutUs_retreat">
+                <div className="aboutCompany aboutUs aboutUs_retreat">
 
                     <h3 className='aboutUs_tittle'>About Company</h3>
 
@@ -20,4 +20,4 @@ export const AboutCompany = () => {
             <hr className='emphasis'/>
         </main>
     )
-} 
+}  

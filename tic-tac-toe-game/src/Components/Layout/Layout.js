@@ -1,9 +1,8 @@
-import { Header } from "../Header"
-import { Footer } from "../Footer"
+import { Header } from "../Header/Header"
+import { Footer } from "../Footer/Footer"
 import { Outlet } from "react-router-dom"
-import './../../style/layout.css'
 
-export const Layout = ({children}) => {
+export const Layout = () => {
 
     return(
         <div className="body">

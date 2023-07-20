@@ -1,11 +1,11 @@
-import './../../style/modal.css'
+import './../../style/Modal/modal.css'
 import { useRef } from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import {Howl} from 'howler';
-import victory from './../../Sounds/victory.mp3'
+import victory from './../../sounds/victory.mp3'
 
-export const Modal = ({winner, isOpen}) => {
+export const Modal = ({winner, isOpen, reset}) => {
 
     const modalRef = useRef(null);
     const [isModalVisible, setModalVisibility] = useState(false);
@@ -41,7 +41,8 @@ export const Modal = ({winner, isOpen}) => {
 
         setTimeout(() => {
             setHideOverflow(false);
-            setModalVisibility(false)
+            setModalVisibility(false);
+            // reset();
         }, 300);
  
     }
@@ -63,8 +64,6 @@ export const Modal = ({winner, isOpen}) => {
                 </div>
             </div>
         </div>
-
-
     }
 
     </>

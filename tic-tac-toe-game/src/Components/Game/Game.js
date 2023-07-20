@@ -1,5 +1,5 @@
-import { EMPTY, X, O } from '../state/cellstate';
-import './../style/game.css'
+import { EMPTY, X, O } from '../../state/cellstate';
+import './../../style/Game/game.css'
 
 const cellStateMap = {
   [EMPTY] : '',

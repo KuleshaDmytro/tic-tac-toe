@@ -1,8 +1,8 @@
-import "./../style/footer.css"
-import full_logo from './../img/log2.svg'
-import inst from './../img/instagram.png'
-import linkedin from './../img/linkedin.png'
-import github from './../img/github-logo.png'
+import "./../../style/Footer/footer.css"
+import full_logo from './../../img/log2.svg'
+import inst from './../../img/instagram.png'
+import linkedin from './../../img/linkedin.png'
+import github from './../../img/github-logo.png'
 
 const toLinkedin = () => window.open('https://www.linkedin.com/in/kuleshadmytro/');
 const toInstagram = () => window.open('https://www.instagram.com/l1ke_a_sunset/');

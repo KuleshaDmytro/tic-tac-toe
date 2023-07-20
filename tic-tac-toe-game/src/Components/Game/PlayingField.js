@@ -1,10 +1,10 @@
-import { Game } from './../Components/Game';
-import { StartAgain } from './../Components/StartAgain';
-import { useGameState } from './../state/useGameState';
+import { Game } from './Game';
+import { StartAgain } from './StartAgain';
+import { useGameState } from '../../state/useGameState';
 import { Rules } from './Rules';
-import { Modal } from './../Components/Modal/Modal';
-import './../style/PlayingField/playingField.css'
-import './../style/main.css'
+import { Modal } from '../Modal/Modal';
+import './../../style/PlayingField/playingField.css'
+import './../../style/main.css'
 // import { useState } from 'react';
 // import { useEffect } from 'react';
 
@@ -23,7 +23,10 @@ export const PlayingField = () => {
     return(
         <div className={`playingField_container pos`}>
           
-              <Modal winner={whoWon} isOpen={won} />
+          <Modal 
+            winner={whoWon} 
+            isOpen={won} 
+            reset={reset}/>
           <div className='playingField_wrapper'>
            
 

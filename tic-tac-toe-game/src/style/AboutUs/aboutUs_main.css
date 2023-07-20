@@ -14,21 +14,32 @@
     border: none;
 }
 
-/* .container_width{
-    width: 800px;
-} */
+.aboutUs{
+    width: 400px;
+}
 
+.aboutUsImg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+
+    transition: .3s all;
+}
+
+.img_size_aboutUs{
+    width: 90%;
+    height: 350px;
+}
 
 .aboutUs_micro_container{
     margin: 10px 15px 10px 0;
-    /* width: 800px; */
     display: flex;
     flex-direction: row;
     transition: .3s all;
 
 }
 .aboutUs_retreat{
-    /* padding: 0 15px; */
     margin: 20px 0 0 10px;
 }
 
@@ -62,10 +73,6 @@
 }
 
 @media (max-width: 850px ){
-
-    /* .aboutUs_wrapper{
-        width: 100%;
-    } */
 
     .aboutUs_micro_container{
         width: 100%;
@@ -107,27 +114,26 @@
         width: 100%;
         height: 1px;
         background-color: rgba(250,248,240, 0.4);
-        /* box-shadow: 0 2px 4px rgba(33,51,67,0.12); */
     }
 
 }
 
 @media (max-width: 440px){
     
-    .welcomeImg, .aboutCompanyImg, .ourMissionImg, .ourExpirienceImg{
+    .aboutUsImg{
         
-        width: 280px !important;
-        height: 200px !important;
+        width: 280px;
+        height: 200px;
     }
 
-    .img_welcome, .img_aboutCompany, .img_ourMission, .img_ourExpirience{
+    .img_size_aboutUs{
 
-        width: 240px !important;
-        height: 250px !important;
+        width: 240px;
+        height: 250px;
 
     }
-    .welcome, .aboutCompany, .ourMission, .ourExpirience{
-        width: 240px !important;
+    .aboutUs{
+        width: 240px ;
     } 
 
 }

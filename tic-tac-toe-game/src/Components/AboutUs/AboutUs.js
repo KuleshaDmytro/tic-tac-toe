@@ -13,8 +13,6 @@ export const AboutUs = () => {
         <>
         <div className="aboutUs_container pos">
            <div className='aboutUs_wrapper'>
-        
-
 
             <WelcomeTo/>
 
@@ -29,13 +27,3 @@ export const AboutUs = () => {
     </>
     )
 }
-
-
-        // <>
-        //     <div className="aboutUs_container">
-        //         <div className="aboutUs_wrapper">
-        //             <h1>About Us</h1>
-        //         </div>
-        //    </div>
-            
-        // </>

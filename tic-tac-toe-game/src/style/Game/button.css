@@ -31,11 +31,7 @@
     background: rgb(255, 186, 57);
     background: linear-gradient(0deg, rgba(255, 166, 0 ,1) 0%, rgba(255, 166, 0 ,1) 100%);
   }
-  .btn:hover {
-    color: rgb(255, 186, 57);
-    background: transparent;
-    box-shadow:none;
-  }
+
   .btn:before,
   .btn:after{
     content:'';
@@ -61,4 +57,12 @@
   .btn:hover:after{
     width:100%;
     transition:400ms ease all;
+  }
+
+  @media (hover: hover) {
+    .btn:hover {
+      color: rgb(255, 186, 57);
+      background: transparent;
+      box-shadow:none;
+    }
   }

@@ -8,12 +8,12 @@ export const WelcomeTo = () => {
 
             <main className='aboutUs_micro_container welcome_container'>
                 {/* <div className='aboutUs_card'> */}
-                    <div className='welcome aboutUs_retreat'>
+                    <div className='welcome aboutUs aboutUs_retreat'>
                         <h2 className='greeting'>Welcome to Two(UAH)</h2>
                     </div>
-                    <div className="welcomeImg aboutUs_retreat">
+                    <div className="welcomeImg aboutUsImg aboutUs_retreat">
 
-                        <div className='img_welcome'></div>
+                        <div className='img_welcome img_size_aboutUs'></div>
 
                     </div>
 

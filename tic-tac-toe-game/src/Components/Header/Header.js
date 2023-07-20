@@ -1,8 +1,8 @@
-import './../style/header.css'
-import logo from './../img/twoUAH.svg'
-import { Sign } from './Sign/Sign'
-import { PlayingField } from './PlayingField'
-import { AboutUs } from './AboutUs/AboutUs'
+import './../../style/Header/header.css'
+import logo from './../../img/twoUAH.svg'
+import { Sign } from '../Sign/Sign'
+import { PlayingField } from '../Game/PlayingField'
+import { AboutUs } from '../AboutUs/AboutUs'
 import { BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom'
 import { useState } from 'react'
 

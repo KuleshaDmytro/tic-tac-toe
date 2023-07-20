@@ -1,4 +1,4 @@
-import './../style/startAgain.css';
+import './../../style/Game/button.css';
 
 export const StartAgain = ({reset}) => {
     return(

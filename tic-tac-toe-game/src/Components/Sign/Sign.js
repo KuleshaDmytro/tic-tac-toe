@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './../../style/Sign/sign.css'
-import './../../style/startAgain.css'
+import './../../style/Game/button.css'
 import { SignIn } from './SignIn'
 import { SignOut } from './SignOut'
 

@@ -7,10 +7,10 @@ export const OurExpirience = () => {
     return(
         <main className='aboutUs_micro_container ourExpirience_container'>
 
-                <div className='ourExpirienceImg aboutUs_retreat'>
-                    <div className='img_ourExpirience'></div>
+                <div className='ourExpirienceImg aboutUsImg aboutUs_retreat'>
+                    <div className='img_ourExpirience img_size_aboutUs'></div>
                 </div>
-                <div className="ourExpirience aboutUs_retreat">
+                <div className="ourExpirience aboutUs aboutUs_retreat">
 
                     <h3 className='aboutUs_tittle'>Our Expirience</h3>
 

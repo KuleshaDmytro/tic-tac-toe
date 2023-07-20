@@ -1,4 +1,4 @@
-import './../style/PlayingField/rules.css'
+import './../../style/PlayingField/rules.css'
 
 export const Rules = () => {
 
