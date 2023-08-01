@@ -1,10 +1,13 @@
 import './../../style/Header/header.css'
 import logo from './../../img/twoUAH.svg'
-import { Sign } from '../Sign/Sign'
+// import { Sign } from '../Sign/Sign'
 import { PlayingField } from '../Game/PlayingField'
 import { AboutUs } from '../AboutUs/AboutUs'
 import { BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom'
 import { useState } from 'react'
+import { SignIn } from '../Sign/SignIn'
+import { SignOut } from '../Sign/SignOut'
+import { ForgotPassword } from '../Sign/ForgotPassword'
 
 
 export const Header = () => {
@@ -47,7 +50,7 @@ export const Header = () => {
           
           <div className='login'>
 
-            <Link to={'/sign'}>
+            <Link to={'/sign/in'}>
               <button className='btn-log'>Sign in / Sign up</button>
             </Link>
 
@@ -75,7 +78,7 @@ export const Header = () => {
             
             <div className='burger-nav-container'>
 
-              <Link to={'/sign'}>
+              <Link to={'/sign/in'}>
                 <button className='btn-log burger_btn-nav'>Sign in / Sign up</button>
               </Link>
                 
@@ -91,7 +94,11 @@ export const Header = () => {
       <Routes>
           <Route exact path="/" element={<PlayingField/>}/>
           <Route exact path="/about-us" element={<AboutUs/>}/>
-          <Route exact path="/sign" element={<Sign/>}/>
+
+          <Route exact path="/sign/in" element={<SignIn/>}/>
+          <Route exact path="/sign/forgot_password" element={<ForgotPassword/>}/>
+          <Route exact path="/sign/up" element={<SignOut/>}/>
+
       </Routes>
     </Router>
 
