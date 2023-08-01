@@ -44,7 +44,6 @@ export const useGameState = () => {
       // Оновлення матриці залежно від номера кроку
       const updatedMatrix = [...state.matrix];
       updatedMatrix[y][x] = state.num % 2 === 0 ? X : O;
-    
       // Перевірка на перемогу
       const winningCombinations = [
         // Горизонтальні комбінації
@@ -65,6 +64,7 @@ export const useGameState = () => {
       let who = 0;
       for (const combination of winningCombinations) {
         const [a, b, c] = combination;
+
         const valueA = updatedMatrix[a[0]][a[1]];
         const valueB = updatedMatrix[b[0]][b[1]];
         const valueC = updatedMatrix[c[0]][c[1]];

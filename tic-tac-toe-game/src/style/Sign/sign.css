@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     margin-top: 35px;
-
+    height: 80.4vh;
 }
 
 .sign_container{
@@ -12,7 +12,7 @@
     /* justify-content: center; */
     /* align-items: end; */
     /* max-width: 400px; */
-    min-height: 80.6vh;
+    /* max-height: 80.6vh; */
     /* border-bottom: 2px solid rgba(128, 128, 128, 0.6); */
 }
 
@@ -43,10 +43,9 @@
 .input_wrapper{
     width: 400px;
 }
-.input_login,
-.input_password{
+.input_style{
     padding: 8px 15px;
-    margin: 12px 0;
+   
     width: 90%;
     border-radius: 3px;
     border: 2px solid rgba(128, 128, 128, 0.4);
@@ -55,9 +54,7 @@
     background-color: rgba(255, 245, 207, 0.8);
     transition: .3s all;
 }
-.input_login{
-    margin-top: 0;
-}
+
 
 .sign{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -75,8 +72,19 @@
     text-align: left;
 }
 
+.fp_card{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
 .forgot_password{
-    text-align: end;
+   margin: 0 5px;
+   cursor: pointer;
+   font-size: 14px;
+   font-weight: 600;
+   border: none;
+   background-color: rgb(250,248,240);
 }
 
 .sign_btn_block{
@@ -93,11 +101,26 @@
     cursor: pointer;
 }
 
-.input_login:focus,
-.input_password:focus{
+.correct_input:focus{
     border: 2px solid rgb(255, 186, 57);
-
     outline: 1px solid rgb(255, 186, 57);
+}
+
+.incorrect_input{
+    border: 2px solid red;
+    outline: 1px solid red;
+}
+.card{
+    margin: 12px 0;
+}
+
+.incorrect{
+    color: red;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.margin_title{
+    margin-top: 0;
 }
 
 .active{

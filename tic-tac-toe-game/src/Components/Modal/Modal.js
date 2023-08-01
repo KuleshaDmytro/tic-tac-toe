@@ -16,12 +16,12 @@ export const Modal = ({winner, isOpen, reset}) => {
         volume: 0.3,
       });
 
-    useEffect(() => {
-        {isModalVisible && 
+    // useEffect(() => {
+    //     {isModalVisible && 
        
-            sound.play();
-        }
-    })
+    //         sound.play();
+    //     }
+    // })
 
     useEffect(() => {
         if (isOpen) {
@@ -56,7 +56,7 @@ export const Modal = ({winner, isOpen, reset}) => {
     <>
     {isModalVisible &&
     
-        <div className='modal_container' id='container' onClick={handleClick}>
+        <div className='modal_container' data-testid="modal_container" onClick={handleClick}>
             <div className={`modal-background`}>
                 <div className={`modal modalIsOpen`} ref={modalRef}> 
                     <h2>{winner}</h2>

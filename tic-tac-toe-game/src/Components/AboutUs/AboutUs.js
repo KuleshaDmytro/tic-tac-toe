@@ -11,9 +11,8 @@ export const AboutUs = () => {
 
     return(
         <>
-        <div className="aboutUs_container pos">
+        <div id='AboutUs' className="aboutUs_container pos">
            <div className='aboutUs_wrapper'>
-
             <WelcomeTo/>
 
             <AboutCompany/>

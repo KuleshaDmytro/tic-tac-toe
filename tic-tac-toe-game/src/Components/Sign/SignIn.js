@@ -1,6 +1,8 @@
 import './../../style/Sign/sign.css'
 
-export const SignIn = () => {
+export const SignIn = ({forgotPassword, handleClickLogin, isEmailCorrect, isPasswordCorrect}) => {
+
+
 
     return (
         <div className='sign_card'>
@@ -8,14 +10,26 @@ export const SignIn = () => {
             <span className='address'>Email address</span>
 
             <div className='input_wrapper'>
-                <input type='login' className='input_login' placeholder='Login'/>
-                <input type='password' className='input_password' placeholder='Password'/>
+
+                <div className='card margin_title'>
+                    <input type='login' className='checking_login correct_input input_style ' placeholder='Login'/>
+                    {!isEmailCorrect && 
+                        <span className='incorrect'>email is incorrect</span>}
+                </div>
+
+                <div className='card'>
+                    <input type='password' className='checking_password correct_input input_style' placeholder='Password'/>
+                    {!isPasswordCorrect && 
+                        <span className='incorrect'>password is incorrect</span>}
+                </div>
             </div>
 
-            <span className='forgot_password'>Forgot password?</span>
+            <div className='fp_card'>
+                <button className='forgot_password' onClick={forgotPassword}>Forgot password?</button>
+            </div>
 
             <div className='sign_btn_block'>
-                    <button className='custom-btn btn btn-size'>Sign in</button>
+                <button className='custom-btn btn btn-size' onClick={handleClickLogin} data-testid="sign_in">Sign in</button>
             </div>
 
         </div>

@@ -5,8 +5,6 @@ import { Rules } from './Rules';
 import { Modal } from '../Modal/Modal';
 import './../../style/PlayingField/playingField.css'
 import './../../style/main.css'
-// import { useState } from 'react';
-// import { useEffect } from 'react';
 
 export const PlayingField = () => {
 
