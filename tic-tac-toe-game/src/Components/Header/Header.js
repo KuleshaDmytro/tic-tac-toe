@@ -8,6 +8,7 @@ import { useState } from 'react'
 import { SignIn } from '../Sign/SignIn'
 import { SignOut } from '../Sign/SignOut'
 import { ForgotPassword } from '../Sign/ForgotPassword'
+import { PasswordRecovery } from '../Sign/PasswordRecovery'
 
 
 export const Header = () => {
@@ -95,8 +96,10 @@ export const Header = () => {
           <Route exact path="/" element={<PlayingField/>}/>
           <Route exact path="/about-us" element={<AboutUs/>}/>
 
+          {/* Sign route */}
           <Route exact path="/sign/in" element={<SignIn/>}/>
           <Route exact path="/sign/forgot_password" element={<ForgotPassword/>}/>
+          <Route exact path='/sign/forgot_password/password_recovery' element={<PasswordRecovery/>}/>
           <Route exact path="/sign/up" element={<SignOut/>}/>
 
       </Routes>

@@ -1,4 +1,5 @@
 import './../../style/Sign/sign.css'
+import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { checking_email } from '../utils/checkingEmail';
 
@@ -32,11 +33,15 @@ export const ForgotPassword = () => {
                     </div>
 
                     <div className='fp_card'>
-                        <button className='forgot_password' >Return to Sign in</button>
+                        <Link to={'/sign/in'}>
+                            <button className='forgot_password' >Return to Sign in</button>
+                        </Link>
                     </div>
 
                     <div className='sign_btn_block'>
-                        <button className='custom-btn btn btn-size' onClick={handleClickForgotPassword}>Next</button>
+                        <Link to={'/sign/forgot_password/password_recovery'}>
+                            <button className='custom-btn btn btn-size' onClick={handleClickForgotPassword}>Next</button>
+                        </Link>
                     </div>
 
                 </div>

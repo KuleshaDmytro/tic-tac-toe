@@ -15,28 +15,27 @@ export const useGameState = () => {
         matrix: createField(),
         num: 0,
         won: false,
-
+        who: 0,
     })
     const reset = () => {
       setState({
         matrix: createField(),
         num: 0,
         won: false,
- 
+        who: 0,
       })
     }
     
     const fire = (x, y) => {
 
-      let sound = new Howl({
-        src: [click]
-      });
+      // let sound = new Howl({
+      //   src: [click]
+      // });
 
-      sound.play();
+      // sound.play();
 
-      
       const cell = state.matrix[y][x];
-      
+
       if (cell === X || cell === O) {
         return;
       }
@@ -44,6 +43,8 @@ export const useGameState = () => {
       // Оновлення матриці залежно від номера кроку
       const updatedMatrix = [...state.matrix];
       updatedMatrix[y][x] = state.num % 2 === 0 ? X : O;
+
+
       // Перевірка на перемогу
       const winningCombinations = [
         // Горизонтальні комбінації
@@ -61,7 +62,7 @@ export const useGameState = () => {
     
     
       let won = false;
-      let who = 0;
+
       for (const combination of winningCombinations) {
         const [a, b, c] = combination;
 
@@ -70,7 +71,7 @@ export const useGameState = () => {
         const valueC = updatedMatrix[c[0]][c[1]];
     
         if (valueA !== EMPTY && valueA === valueB && valueA === valueC) {
-          who = valueA;
+          state.who = valueA;
           won = true;
           break;
         }
@@ -80,7 +81,7 @@ export const useGameState = () => {
         matrix: updatedMatrix,
         num: state.num + 1,
         won: won,
-        who: who,
+        who: (state.num + 1) % 2 === 0 ? X : O,
       });
     };
 

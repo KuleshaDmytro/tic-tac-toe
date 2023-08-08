@@ -10,6 +10,7 @@ export const PlayingField = () => {
 
     const {reset, matrix, fire, won, who, num} = useGameState();
 
+  console.log(who);
 
     if (!won && num === 9) {
       alert(`Draw`);    

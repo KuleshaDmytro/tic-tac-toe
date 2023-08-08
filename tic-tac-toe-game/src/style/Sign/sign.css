@@ -129,6 +129,9 @@
     transition: 0.3s all;
 }
 
+.forgot_password:hover{
+    color: rgb(75, 75, 75);
+}
 
 @media( max-width: 450px){
 
@@ -160,14 +163,14 @@
         align-items: center;
         transition: .3s all;
     }
-    .change_sign{
+    /* .change_sign{
         width: 70%;
         transition: .3s all;
-    }
-    .address{
+    } */
+    /* .address{
         padding-left: 60px;
     }
     .forgot_password{
         padding-right: 60px;
-    }
+    } */
 }
