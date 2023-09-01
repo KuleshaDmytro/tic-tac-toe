@@ -11,14 +11,22 @@ export const SignIn = () => {
     const [isPasswordCorrect, setPasswordCorrect] = useState(true);
 
     const handleClickLogin = () => {
-        checking_email(setEmailCorrect);
-        checking_password(setPasswordCorrect);
-        console.log('The user has logged');
+  
+        const isEmailInputCorrect = checking_email();
+        const isPasswordInputCorrect = checking_password();
+
+        setEmailCorrect(isEmailInputCorrect);
+        setPasswordCorrect(isPasswordInputCorrect);
+
+        if (isEmailInputCorrect && isPasswordInputCorrect) {
+            localStorage.removeItem('activeBtn');
+            window.location.href = '/'
+        }
+
     }
 
-
     return (
-        <div className="sign_nav">
+        <div className="sign_nav" data-testid="signIn_component">
             <div className='sign_container'>
 
                 <SignNav/>
@@ -32,19 +40,19 @@ export const SignIn = () => {
                         <div className='card margin_title'>
                             <input type='login' className='checking_login correct_input input_style ' placeholder='Login'/>
                             {!isEmailCorrect && 
-                                <span className='incorrect'>email is incorrect</span>}
+                                <span className='incorrect'>email is incorrect or empty</span>}
                         </div>
 
                         <div className='card'>
                             <input type='password' className='checking_password correct_input input_style' placeholder='Password'/>
                             {!isPasswordCorrect && 
-                                <span className='incorrect'>password is incorrect</span>}
+                                <span className='incorrect'>password is incorrect or empty</span>}
                         </div>
                     </div>
 
                     <div className='fp_card'>
-                        <Link to={'/sign/forgot_password'} >
-                            <button className='forgot_password'>Forgot password?</button>
+                        <Link to={'/sign/forgot_password'} className='forgot_password'>
+                            Forgot password?
                         </Link>
                     </div>
 

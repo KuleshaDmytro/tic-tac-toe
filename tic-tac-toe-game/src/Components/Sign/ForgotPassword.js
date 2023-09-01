@@ -4,15 +4,17 @@ import { useState } from 'react';
 import { checking_email } from '../utils/checkingEmail';
 
 export const ForgotPassword = () => {
-
-    const [isEmailCorrect, setEmailCorrect] = useState(true);
+    const [isCorrect, setIsCorrect] = useState(true);
 
     const handleClickForgotPassword = () => {
-        checking_email(setEmailCorrect);
+        const isEmailCorrect = checking_email();
 
-        // if (isEmailCorrect) {            
-        //     passwordRecovery();
-        // }
+        setIsCorrect(isEmailCorrect);
+
+        if (isEmailCorrect) {            
+            window.location.href = '/sign/forgot_password/password_recovery';
+        }
+
     }
 
     return(
@@ -26,22 +28,20 @@ export const ForgotPassword = () => {
 
                         <div className='card margin_title'>
                             <input type='login' className='checking_login correct_input input_style ' placeholder='Email'/>
-                            {!isEmailCorrect && 
-                                <span className='incorrect'>email is incorrect</span>}
+                            {!isCorrect && 
+                                <span className='incorrect'>email is incorrect or empty</span>}
                         </div>
 
                     </div>
 
                     <div className='fp_card'>
-                        <Link to={'/sign/in'}>
-                            <button className='forgot_password' >Return to Sign in</button>
+                        <Link to={'/sign/in'} className='forgot_password'>
+                            Return to Sign in
                         </Link>
                     </div>
 
-                    <div className='sign_btn_block'>
-                        <Link to={'/sign/forgot_password/password_recovery'}>
-                            <button className='custom-btn btn btn-size' onClick={handleClickForgotPassword}>Next</button>
-                        </Link>
+                    <div className='sign_btn_block'>              
+                        <button className='custom-btn btn btn-size' onClick={handleClickForgotPassword}>Next</button>
                     </div>
 
                 </div>

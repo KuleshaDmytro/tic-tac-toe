@@ -16,12 +16,12 @@ export const Modal = ({winner, isOpen, reset}) => {
         volume: 0.3,
       });
 
-    // useEffect(() => {
-    //     {isModalVisible && 
+    useEffect(() => {
+        {isModalVisible && 
        
-    //         sound.play();
-    //     }
-    // })
+            sound.play();
+        }
+    })
 
     useEffect(() => {
         if (isOpen) {

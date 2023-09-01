@@ -1,7 +1,7 @@
 import './App.css';
 import { Layout } from './Components/Layout/Layout';
 
-function App() {
+export function App() {
 
   return (
     <div className="App">

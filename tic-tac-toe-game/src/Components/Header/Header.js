@@ -9,7 +9,7 @@ import { SignIn } from '../Sign/SignIn'
 import { SignOut } from '../Sign/SignOut'
 import { ForgotPassword } from '../Sign/ForgotPassword'
 import { PasswordRecovery } from '../Sign/PasswordRecovery'
-
+import { PageNotFound } from '../PageNotFound/PageNotFound'
 
 export const Header = () => {
 
@@ -40,19 +40,19 @@ export const Header = () => {
             <img src={logo} alt='logo' className='logo'></img>
           </div>
           <div className='nav'>
-            <Link to={'/'}>
-              <button className='btn-nav'>Play Game</button>
+            <Link to={'/'} className='btn-nav'>
+              Play Game
             </Link>
 
-            <Link to={'/about-us'}>
-              <button className='btn-nav'>About us</button>
+            <Link to={'/about-us'} className='btn-nav'>
+              About us
             </Link>
           </div>
           
           <div className='login'>
 
-            <Link to={'/sign/in'}>
-              <button className='btn-log'>Sign in / Sign up</button>
+            <Link to={'/sign/in'} className='btn-log'>
+              Sign in / Sign up
             </Link>
 
           </div>
@@ -67,20 +67,20 @@ export const Header = () => {
 
           <div className={menu_class}>
             <div className='burger-nav-container menu_padding_top'>
-              <Link to={'/'}>
-                <button className='btn-nav burger_btn-nav'>Play Game</button>
+              <Link to={'/'} className='btn-nav burger_btn-nav'>
+                Play Game
               </Link>
                 
-              <Link to={'/about-us'}>
-                <button className='btn-nav burger_btn-nav'>About us</button>
+              <Link to={'/about-us'} className='btn-nav burger_btn-nav'>
+                About us
               </Link>
                            
             </div>
             
             <div className='burger-nav-container'>
 
-              <Link to={'/sign/in'}>
-                <button className='btn-log burger_btn-nav'>Sign in / Sign up</button>
+              <Link to={'/sign/in'} className='btn-log burger_btn-nav'>
+                Sign in / Sign up
               </Link>
                 
             </div>
@@ -101,7 +101,7 @@ export const Header = () => {
           <Route exact path="/sign/forgot_password" element={<ForgotPassword/>}/>
           <Route exact path='/sign/forgot_password/password_recovery' element={<PasswordRecovery/>}/>
           <Route exact path="/sign/up" element={<SignOut/>}/>
-
+          <Route path='*' element={<PageNotFound/>}/>
       </Routes>
     </Router>
 

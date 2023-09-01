@@ -27,12 +27,12 @@ export const useGameState = () => {
     }
     
     const fire = (x, y) => {
+     
+      let sound = new Howl({
+        src: [click]
+      });
 
-      // let sound = new Howl({
-      //   src: [click]
-      // });
-
-      // sound.play();
+      sound.play();
 
       const cell = state.matrix[y][x];
 
@@ -44,8 +44,6 @@ export const useGameState = () => {
       const updatedMatrix = [...state.matrix];
       updatedMatrix[y][x] = state.num % 2 === 0 ? X : O;
 
-
-      // Перевірка на перемогу
       const winningCombinations = [
         // Горизонтальні комбінації
         [[0, 0], [0, 1], [0, 2]],
@@ -61,7 +59,7 @@ export const useGameState = () => {
       ];
     
     
-      let won = false;
+      // let won = false;
 
       for (const combination of winningCombinations) {
         const [a, b, c] = combination;
@@ -72,19 +70,20 @@ export const useGameState = () => {
     
         if (valueA !== EMPTY && valueA === valueB && valueA === valueC) {
           state.who = valueA;
-          won = true;
+          state.won = true;
           break;
         }
       }
-    
+
       setState({
         matrix: updatedMatrix,
         num: state.num + 1,
-        won: won,
-        who: (state.num + 1) % 2 === 0 ? X : O,
-      });
+        won: state.won,
+        who: (state.num + 1) % 2 === 0 ? O : X,
+      });      
     };
 
     const {num, matrix, won, who} = state;
+
     return {num, reset, matrix, fire, won, who};
 }

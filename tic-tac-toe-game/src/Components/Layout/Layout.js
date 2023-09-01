@@ -8,8 +8,7 @@ export const Layout = () => {
         <div className="body">
             <Header/>
 
-                <Outlet/>
-
+            <Outlet/>
 
             <Footer/>
         </div >

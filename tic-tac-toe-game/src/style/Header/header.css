@@ -39,9 +39,10 @@ a{
     display: flex;
     justify-content: center;
     width: 33.3333%;
-    /* width: 46.3333%; */
 }
 .btn-nav, .btn-log{
+    display: flex;
+    align-items: center;
     margin: 0 10px;
     padding: 0 5px;
     border: none;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen, fireEvent, queryByTestId } from '@testing-library/react';
+import { render, screen, queryByTestId } from '@testing-library/react';
 import { Modal } from './Modal';
 
 describe('Modal component', () => {

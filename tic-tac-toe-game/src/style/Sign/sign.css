@@ -81,7 +81,7 @@
 .forgot_password{
    margin: 0 5px;
    cursor: pointer;
-   font-size: 14px;
+   font-size: 15px;
    font-weight: 600;
    border: none;
    background-color: rgb(250,248,240);
@@ -101,15 +101,16 @@
     cursor: pointer;
 }
 
+.incorrect_input{
+    border: 2px solid red !important;
+    outline: 1px solid red !important;
+}
 .correct_input:focus{
     border: 2px solid rgb(255, 186, 57);
     outline: 1px solid rgb(255, 186, 57);
 }
 
-.incorrect_input{
-    border: 2px solid red;
-    outline: 1px solid red;
-}
+
 .card{
     margin: 12px 0;
 }

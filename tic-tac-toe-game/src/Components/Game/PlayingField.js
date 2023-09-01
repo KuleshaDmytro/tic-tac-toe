@@ -10,14 +10,12 @@ export const PlayingField = () => {
 
     const {reset, matrix, fire, won, who, num} = useGameState();
 
-  console.log(who);
-
     if (!won && num === 9) {
       alert(`Draw`);    
     }
 
-
     const whoWon = who === 1 ? "X Won": "O Won";
+    // console.log(who);
   
     return(
         <div className={`playingField_container pos`}>
