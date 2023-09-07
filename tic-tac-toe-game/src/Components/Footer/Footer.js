@@ -19,7 +19,7 @@ export const Footer = () => {
           <div className="social-networks">
               <div className="github-card"><img src={github} alt="GitHub" className="github" onClick={toGithub}></img></div>
               <div className="linkedin-card"><img src={linkedin} alt="Linkedin" className="linkedin" onClick={toLinkedin}></img></div>
-              <div className="inst-card"><img src={inst} alt="Instagram" className="inst" onClick={toInstagram}></img></div>
+              <div className="inst-card"><img src={inst} alt="Instagram" className="inst" onClick={toInstagram} data-testid='instagram'></img></div>
           </div>
         </div>
       </footer>

@@ -40,18 +40,18 @@ export const Header = () => {
             <img src={logo} alt='logo' className='logo'></img>
           </div>
           <div className='nav'>
-            <Link to={'/'} className='btn-nav'>
+            <Link to={'/'} className='btn-nav' data-testid='Play_Game_main'>
               Play Game
             </Link>
 
-            <Link to={'/about-us'} className='btn-nav'>
+            <Link to={'/about-us'} className='btn-nav' data-testid='About_us_main'>
               About us
             </Link>
           </div>
           
           <div className='login'>
 
-            <Link to={'/sign/in'} className='btn-log'>
+            <Link to={'/sign/in'} className='btn-log' data-testid='Sign_in_main'>
               Sign in / Sign up
             </Link>
 

@@ -1,40 +1,23 @@
 import { checking_password } from "./checkingPassword";
 
-describe('checking password', () => {
-    let setPasswordCorrect;
-    let passwordElement;
+describe("checking_password", () => {
+  it("should return true for a valid password", () => {
+    document.body.innerHTML = `
+      <input type="password" class="checking_password" value="123456Aa">
+    `;
     
-    beforeEach(() => {
-        setPasswordCorrect = jest.fn();
-        passwordElement = document.createElement('input');
-        passwordElement.classList.add('checking_password');
+    const result = checking_password();
+    
+    expect(result).toBe(true);
+  });
 
-        document.body.appendChild(passwordElement);
-    })
-
-    afterEach(() => {
-        document.body.removeChild(passwordElement);
-    })
-
-    it('should set setPasswordCorrect to true if password is valid', () => {
-        passwordElement.value = 'Aa123456'
-
-        checking_password(setPasswordCorrect)
-
-        expect(setPasswordCorrect).toHaveBeenCalledWith(true);
-        expect(passwordElement.classList).toContain('correct_input');
-        expect(passwordElement.classList).not.toContain('incorrect_input');
-
-    })
-
-    it('should set setPasswordCorrect to false if password is invalid', () => {
-        passwordElement.value = 'GG/WP'
-
-        checking_password(setPasswordCorrect)
-
-        expect(setPasswordCorrect).toHaveBeenCalledWith(false);
-        expect(passwordElement.classList).toContain('incorrect_input');
-        expect(passwordElement.classList).not.toContain('correct_input');
-
-    })
-})
+  it("should return false for an invalid password", () => {
+    document.body.innerHTML = `
+      <input type="password" class="checking_password" value="123123123">
+    `;
+    
+    const result = checking_password();
+    
+    expect(result).toBe(false);
+  });
+});

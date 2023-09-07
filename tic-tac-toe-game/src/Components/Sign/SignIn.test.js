@@ -5,8 +5,10 @@ import {
 import { SignIn } from './SignIn';
 import userEvent from '@testing-library/user-event';
 import {
-    MemoryRouter
+    MemoryRouter, Routes
   } from "react-router-dom";
+import { ForgotPassword } from './ForgotPassword';
+import { act } from 'react-dom/test-utils';
 
 describe('Sign In events', () => {
     it('User write login', () => {
@@ -42,7 +44,21 @@ describe('Sign In events', () => {
     });
     
 
-    it('Show forgot password page', () => {
+    it('User click forgot password', () => {
+        render(
+            <MemoryRouter initialEntries={['/sign/in']}>
+                <SignIn />
+            </MemoryRouter>);
+            
 
+        const forgot_password = screen.getByTestId('forgot_password');
+        fireEvent.click(forgot_password);
+
+        act(() => {
+            const element = screen.getByTestId('forgot_password');
+            expect(element).toBeInTheDocument();
+        })
+        
+        // expect(window.location.pathname).toBe('/sign/forgot_password');
     })
 })

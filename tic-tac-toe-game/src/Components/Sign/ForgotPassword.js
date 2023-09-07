@@ -35,7 +35,7 @@ export const ForgotPassword = () => {
                     </div>
 
                     <div className='fp_card'>
-                        <Link to={'/sign/in'} className='forgot_password'>
+                        <Link to={'/sign/in'} className='forgot_password' data-testid="forgot_password">
                             Return to Sign in
                         </Link>
                     </div>

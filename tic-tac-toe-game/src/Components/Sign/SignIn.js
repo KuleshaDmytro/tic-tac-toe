@@ -51,7 +51,7 @@ export const SignIn = () => {
                     </div>
 
                     <div className='fp_card'>
-                        <Link to={'/sign/forgot_password'} className='forgot_password'>
+                        <Link to={'/sign/forgot_password'} className='forgot_password' data-testid="forgot_password">
                             Forgot password?
                         </Link>
                     </div>

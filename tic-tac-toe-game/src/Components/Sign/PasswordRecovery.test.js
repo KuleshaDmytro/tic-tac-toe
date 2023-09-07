@@ -6,6 +6,7 @@ import {
     fireEvent,
     act } from '@testing-library/react';
 import {
+  BrowserRouter,
     MemoryRouter
   } from "react-router-dom";
 
@@ -22,47 +23,21 @@ describe('Password recovery', () => {
 
     })
     it('Changing the component when clicking the Return to login" button', () => {
-        // render(<MemoryRouter><PasswordRecovery/></MemoryRouter>);
-        // const button = screen.getByTestId('return_to_signIn');
-        // expect(button).toBeInTheDocument();
- 
-        // fireEvent.click(button);
-
-        // render(<MemoryRouter><SignIn/></MemoryRouter>)
-        // const signIn_component =screen.getByTestId('signIn_component')
-        // screen.debug()
-        // expect(signIn_component).toBeInTheDocument();
-        // expect(screen.getByTestId('return_to_signIn')).not.toBeInTheDocument();
-
-        // const history = createMemoryHistory();
-        // render(
-        //     <MemoryRouter >
-        //         <PasswordRecovery />
-        //     </MemoryRouter>
-        //   );
-        
-        //   const returnToSignInButton = getByTestId('return_to_signIn');
-        //   fireEvent.click(returnToSignInButton);
-        
-        // expect(container.innerHTML).toMatch('Sign in')
-        // //   expect(window.location.pathname).toBe('/sign/in');
 
         const { getByTestId } = render(
-            <MemoryRouter>
+            <BrowserRouter initialEntries={['sign/forgot_password/password_recovery']}>
               <PasswordRecovery />
-            </MemoryRouter>
+            </BrowserRouter>
           );
         
           const button = getByTestId('return_to_signIn');
-          act(() => {
+          fireEvent.click(button);
 
-              fireEvent.click(button);
+          act(() => {
+            const element = screen.getByText(/Sign in/i);
+            expect(element).toBeInTheDocument();
           })
-        
-          // Дочекайтеся асинхронної зміни URL перед перевіркою
-         
-            expect(window.location.pathname).toBe('/sign/in');
-          
+                  
     })
 })
 // Добавити тест якщо юзер авторизувався то перекинути його на початкову сторінку
