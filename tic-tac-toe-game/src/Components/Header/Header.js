@@ -37,7 +37,9 @@ export const Header = () => {
      
         <div className='header_card'>
           <div className='logo_card'>
-            <img src={logo} alt='logo' className='logo'></img>
+            <Link to={'/about-us'} >
+              <img src={logo} alt='logo' className='logo'></img>
+            </Link>
           </div>
           <div className='nav'>
             <Link to={'/'} className='btn-nav' data-testid='Play_Game_main'>
